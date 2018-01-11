@@ -1,3 +1,5 @@
+Authors: Alexander (Xander) Riga, Abdul
+
 What:
 
 We are given a static table of data with:
