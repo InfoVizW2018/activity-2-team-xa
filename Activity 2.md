@@ -2,7 +2,9 @@ What:
 
 We are given a static table of data with:
 
-   Categorical attributes: The vessel, and station names
+   Categorical attributes: 
+   
+      The vessel, and station names
 
    Ordered attributes:
 
