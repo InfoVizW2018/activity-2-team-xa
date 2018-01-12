@@ -25,11 +25,14 @@ We are given a static table of data with:
 
 Why:
 
+      This model is effective for identifying the sailings based on location of the stations, so it is a topology map with the edges 
+      representing the routes, and the information showing the ships and their sailing times is written along the specified routes.
+
 How might you use this?
 
       This would be an effective model for understanding when sailings are happening at each station. It could be upgraded to include a 
-      map underneath the stations in the visualization so that it would be even more clear which stations are which. This is a very strong 
-      model for being able to quickly and easily determine when the sailings are for each route.
+      map underneath the stations in the visualization so that it would be even more clear which stations are which. This is a very 
+      strong model for being able to quickly and easily determine when the sailings are for each route.
 
 Pitfalls:
 
