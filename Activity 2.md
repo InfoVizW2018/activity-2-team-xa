@@ -2,8 +2,15 @@ Authors: Alexander (Xander) Riga, Abdul
 
 Assumptions:
 
-       This model assumes that the sailings are static and that they will not change the ships on each route, the times of the sailings, 
-       or the locations of the stations
+       The ships will not change on each route
+       
+       The times of the sailings will not change
+       
+       The locations of the stations will not change
+       
+       The length of the sailings will not change
+       
+       
 
 What:
 
