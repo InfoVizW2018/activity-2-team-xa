@@ -1,5 +1,10 @@
 Authors: Alexander (Xander) Riga, Abdul
 
+Assumptions:
+
+       This model assumes that the sailings are static and that they will not change the ships on each route, the times of the sailings, 
+       or the locations of the stations
+
 What:
 
 We are given a static table of data with:
@@ -19,3 +24,14 @@ We are given a static table of data with:
       The locations of the stations
 
 Why:
+
+How might you use this?
+
+      This would be an effective model for understanding when sailings are happening at each station. It could be upgraded to include a 
+      map underneath the stations in the visualization so that it would be even more clear which stations are which. This is a very strong 
+      model for being able to quickly and easily determine when the sailings are for each route.
+
+Pitfalls:
+
+      It can still be difficult to compare the times of various sailings from different stations. If someone wanted to see all of the 
+      sailings at a certain time of day, then this model would not be very effective.
