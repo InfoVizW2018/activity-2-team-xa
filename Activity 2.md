@@ -1,47 +1,55 @@
 Authors: Alexander (Xander) Riga, Abdul
 
-Assumptions:
+# Assumptions 
 
-       The ships will not change on each route
-       
-       The times of the sailings will not change
-       
-       The locations of the stations will not change
-       
-       The length of the sailings will not change
-       
-       
+1. Stations coordinate are available.
+2. Vessel capacity is available
+3. Number of sold ticket is known
+4. Number of  berth is available
+5. Number of occupied berth is known
 
-What:
+From now each of those assumption will be referred in this document by **An**, n being the number of the assumption.
 
-We are given a static table of data with:
+# What type of dataset is at our disposal?
 
-   Categorical attributes: 
-   
-      The vessel, and station names
+We are given  *tables* containing vessels routing schedule grouped by routes and days of week. Each item of a table represent routing information with attributes of the *Vessel* which travels from station *A* at *Departure* time to station *B* at *Arrival* time. 
 
-   Ordered attributes:
+This dataset has mixed of  different types of attributes. For instance there are:
 
-      Ordinal: The days of the week(cyclic)
-		
-      Quantitative: The times of the sailings(sequential)
+- Categorical attributes: vessels and stations names
+- Ordered ordinal cyclic attribute: the day of week
+- Ordered quantitative attributes: times
 
-   Spatial:
+This dataset can also be seen as spatial with respect of station geographical position (**A1**).
 
-      The locations of the stations
+# Why the need for a visualization?
 
-Why:
+There are some need (from Seaspan) that motivate to build a visualization of this dataset. Precisely, the visualization should enable, at least, to  
 
-      This model is effective for identifying the sailings based on location of the stations, so it is a topology map with the edges 
-      representing the routes, and the information showing the ships and their sailing times is written along the specified routes.
+1. Adapt schedules based on current load information 
+2. Manual control the schedule
+3. Examine possible schedule by a visual way 
+4. Visualize  the schedule of each vessel
+5. Visualize The load of each vessel
+6. Visualize the berth Occupation evolution
 
-How might you use this?
+From now each of these needs will be referred in this document by **Nk**, k being the number of the need.
 
-      This would be an effective model for understanding when sailings are happening at each station. It could be upgraded to include a 
-      map underneath the stations in the visualization so that it would be even more clear which stations are which. This is a very 
-      strong model for being able to quickly and easily determine when the sailings are for each route.
+# How 
 
-Pitfalls:
+For the sake of clarity and efficiency we choose to provide two complementary visualization support. The first one is focused on vessel schedule and the second on routing information. Those are dynamic visualization connect to dataset. 
 
-      It can still be difficult to compare the times of various sailings from different stations. If someone wanted to see all of the 
-      sailings at a certain time of day, then this model would not be very effective.
+### Vessel Time View
+
+This visualization represents each vessel schedule information around a 24h clock. It has the merit to pop out instantly the working/free time of vessel for each day of the week. It also address answer for those needs  **N1, N2, N3,  N4**. 
+
+**Pitfalls** Lack of N5 and N6 and details.
+
+### Vessels Routing View
+
+This visualization focuses on vessels' routing visualization.  In addition of the **N1 - N4**, it also responds to those need:
+
+- **N5** : with the help of those assumptions **A2** and **A3**. We choose to use circle progress bar to repesente the load of the vessel because we want to promote global view (cf. how full is...) over the detail one.
+- **N6**: With the help A4 and A5 assumption.
+
+**Pitfalls**: This is a daily routing view. It is difficult to have a weekly comparision. This pitfall can be partially resolve with the vessel time view
